@@ -177,3 +177,4 @@ C:\Users\VALERIA ORTEGA\source\repos\ValeriaOrtega\ProyectoPostres\obj\Debug\Pro
 C:\Users\VALERIA ORTEGA\source\repos\ValeriaOrtega\ProyectoPostres\obj\Debug\ProyectoPostres.csproj.CopyComplete
 C:\Users\VALERIA ORTEGA\source\repos\ValeriaOrtega\ProyectoPostres\obj\Debug\ProyectoPostres.dll
 C:\Users\VALERIA ORTEGA\source\repos\ValeriaOrtega\ProyectoPostres\obj\Debug\ProyectoPostres.pdb
+C:\Users\VALERIA ORTEGA\Source\Repos\ValeriaOrtega\ProyectoPostres\obj\Debug\ProyectoPostres.csprojAssemblyReference.cache
