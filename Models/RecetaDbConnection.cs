@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ProyectoPostres.Models
 {
-    public class RecetaDbConnection:DbContext
+    public class RecetaDbConnection : DbContext
     {
         public RecetaDbConnection() : base("recetadb")
         {
@@ -22,6 +22,6 @@ namespace ProyectoPostres.Models
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
-        public DbSet<Receta> Recetas{ get; set; }
+        public DbSet<Receta> Recetas { get; set; }
     }
 }
