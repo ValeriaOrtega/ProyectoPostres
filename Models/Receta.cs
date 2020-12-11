@@ -10,7 +10,6 @@ namespace ProyectoPostres.Models
         public int Id { get; set; }
         public string Nombre_Postre { get; set; }
         public string Ingredientes { get; set; }
-
         public string Receta_Postre { get; set; }
 
     }
