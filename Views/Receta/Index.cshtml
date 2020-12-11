@@ -1,45 +1,55 @@
 ﻿@model IEnumerable<ProyectoPostres.Models.Receta>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Recetas";
 }
 
-<h2>Index</h2>
+<h2>Tabla Recetas</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre_Postre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ingredientes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Receta_Postre)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre_Postre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ingredientes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Receta_Postre)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+<p class="m-3">
+        <a href="@Url.Action("Crear","Create")" class="btn btn-sm bg-light text-dark"><i class="fas fa-plus"> Nueva Tabla </i></a>
+    </p>
 
-</table>
+
+<div class="card card-body" style="background-color:#CD853F;">
+    <table class="table">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre_Postre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredientes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Receta_Postre)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre_Postre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ingredientes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Receta_Postre)
+                </td>
+                <td>
+                    <button type="button" class="btn btn-dark bg-light" title="Editar">@Html.ActionLink("Editar", "Edit", new { id = item.Id }) </button>
+                    <button type="button" class="btn btn-dark bg-info" title="Ver">@Html.ActionLink("Detalles", "Details", new { id = item.Id })</button>
+                    <button type="button" class="btn btn-dark bg-dark" title="Eliminar">@Html.ActionLink("Eliminar", "Delete", new { id = item.Id })</button>
+
+                    @*<a href="@Url.Action("Editar", "Edit", new { id = item.Id })" class="btn btn-light">Editar</a>
+                    <a href="@Url.Action("Detalles", "Details", new { id = item.Id })" class="btn btn-info">Detalles</a>
+                    <a href="@Url.Action("Eliminar", "Delete", new { id = item.Id })" class="btn btn-dark">Eliminar</a>*@
+                </td>
+            </tr>
+        }
+    </table>
+</div>
