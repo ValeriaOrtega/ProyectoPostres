@@ -13,7 +13,14 @@ namespace ProyectoPostres.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Postres()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Receta()
         {
             ViewBag.Message = "Your application description page.";
 
