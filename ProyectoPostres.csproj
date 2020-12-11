@@ -398,9 +398,9 @@
     <Content Include="Views\Home\Postres.cshtml" />
     <Content Include="Views\Receta\Index.cshtml" />
     <Content Include="Views\Receta\Details.cshtml" />
-    <Content Include="Views\Receta\Create.cshtml" />
     <Content Include="Views\Receta\Edit.cshtml" />
     <Content Include="Views\Receta\Delete.cshtml" />
+    <Content Include="Views\Receta\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

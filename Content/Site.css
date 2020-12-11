@@ -6,7 +6,7 @@ header {
 }
 body {
     background-image: url(https://cdn.pixabay.com/photo/2017/03/31/10/56/waffles-2190961_960_720.jpg);
-    background-repeat:no-repeat ;
+    background-repeat:no-repeat;
     background-origin:unset;
     background-size:cover;
     padding-top: 50px;
@@ -14,12 +14,14 @@ body {
     color:white;
     margin:0;
     padding:0;
+    text-decoration:none;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    text-decoration: none;
 }
 
 
@@ -36,4 +38,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+
+
 
