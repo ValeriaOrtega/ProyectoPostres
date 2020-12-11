@@ -19,23 +19,27 @@ namespace ProyectoPostres.Controllers
         // GET: Receta/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var receta = db.Recetas.Find(id);
+            return View(receta);
         }
 
         // GET: Receta/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-            return View();
+            var receta = db.Recetas.Find(id);
+            return View(receta);
         }
 
         // POST: Receta/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                var receta = db.Recetas.Find(id);
+               /* db.Recetas.Create(receta);*/
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -47,17 +51,23 @@ namespace ProyectoPostres.Controllers
         // GET: Receta/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var receta = db.Recetas.Find(id);
+            return View(receta);
         }
 
         // POST: Receta/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Receta c)
         {
             try
             {
                 // TODO: Add update logic here
 
+                var receta = db.Recetas.Find(id);
+                receta.Nombre_Postre = c.Nombre_Postre;
+                receta.Ingredientes = c.Ingredientes;
+                receta.Receta_Postre = c.Receta_Postre;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -81,7 +91,9 @@ namespace ProyectoPostres.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+                var receta = db.Recetas.Find(id);
+                db.Recetas.Remove(receta);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch

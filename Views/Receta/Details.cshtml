@@ -1,12 +1,12 @@
 ﻿@model ProyectoPostres.Models.Receta
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
-<div>
+<div class="card card-body" style="background-color:#CD853F; width:250px; color:black;">
     <h4>Receta</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar", "Index")
 </p>
